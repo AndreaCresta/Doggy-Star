@@ -1,0 +1,141 @@
+/* 
+ * Doggy Star - Custom CSS
+ * Colors: Primary (Orange) #f97316, Secondary (Dark Blue) #1e293b
+ */
+
+:root {
+    --primary-color: #f97316;
+    --primary-hover: #ea580c;
+    --secondary-color: #1e293b;
+    --secondary-light: #334155;
+    --text-dark: #1e293b;
+    --text-light: #64748b;
+    --bg-light: #f8fafc;
+}
+
+/* Typography */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-dark);
+}
+
+h1, h2, h3, h4, h5, .navbar-brand {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Utility Classes */
+.text-primary-custom {
+    color: var(--primary-color) !important;
+}
+
+.text-secondary-custom {
+    color: var(--secondary-color) !important;
+}
+
+.bg-secondary-custom {
+    background-color: var(--secondary-color) !important;
+}
+
+.btn-primary-custom {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+}
+
+/* Navbar */
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--secondary-color);
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 90vh;
+    background-image: url('https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=1920&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 41, 59, 0.5); /* #1e293b with 50% opacity */
+    z-index: 0;
+}
+
+/* Cards */
+.feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.service-card {
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+.service-card .card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Footer */
+footer a {
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: var(--primary-color) !important;
+}
+
+#status-badge {
+    transition: all 0.3s ease;
+}
+
+/* Smooth Scrolling is handled by CCS for supported browsers, JS fallback included */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Offset for sticky navbar */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 70vh;
+    }
+    
+    .display-3 {
+        font-size: 2.5rem;
+    }
+}
