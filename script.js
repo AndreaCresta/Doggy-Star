@@ -3,9 +3,33 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Force scroll to top on reload
+    if (history.scrollRestoration) {
+        history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+
     initOpeningHoursBadge();
     initNavbarAutoClose();
+    initNavbarScroll();
 });
+
+/**
+ * Handles the navbar transparency and style change on scroll.
+ */
+function initNavbarScroll() {
+    const navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.remove('navbar-transparent');
+            navbar.classList.add('navbar-scrolled');
+        } else {
+            navbar.classList.add('navbar-transparent');
+            navbar.classList.remove('navbar-scrolled');
+        }
+    });
+}
 
 /**
  * Updates the 'Open/Closed' badge in the footer based on current time.
@@ -17,14 +41,14 @@ function initOpeningHoursBadge() {
     const day = now.getDay(); // 0 = Sunday, 1 = Monday, ...
     const hour = now.getHours();
     const minute = now.getMinutes();
-    
+
     // Helper to check if currently open
     // Mon(1) - Fri(5): 9-18
     // Sat(6): 9-13
     // Sun(0): Closed
-    
+
     let isOpen = false;
-    
+
     if (day >= 1 && day <= 5) {
         // Weekdays: 9:00 to 18:00 (exclusive of 18:00)
         if (hour >= 9 && hour < 18) {
@@ -44,7 +68,7 @@ function initOpeningHoursBadge() {
 function updateBadgeUI(element, isOpen) {
     // Remove all semantic classes
     element.className = 'badge rounded-pill px-3 py-2 fs-6'; // Reset base classes (Bootstrap classes)
-    
+
     if (isOpen) {
         element.classList.add('text-bg-success'); // Bootstrap 5 helper for white text on green
         element.innerHTML = '<i class="fa-solid fa-door-open me-2"></i>ORA SIAMO APERTI';
@@ -61,10 +85,10 @@ function updateBadgeUI(element, isOpen) {
 function initNavbarAutoClose() {
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link:not(.dropdown-toggle)');
     const navbarCollapse = document.getElementById('navbarNav');
-    
+
     // Bootstrap instance for the collapse element
     // We check if the element exists and is visible before trying to logic it
-    
+
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             if (navbarCollapse.classList.contains('show')) {

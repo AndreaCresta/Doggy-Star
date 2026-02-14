@@ -19,7 +19,12 @@ body {
     color: var(--text-dark);
 }
 
-h1, h2, h3, h4, h5, .navbar-brand {
+h1,
+h2,
+h3,
+h4,
+h5,
+.navbar-brand {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -51,25 +56,123 @@ h1, h2, h3, h4, h5, .navbar-brand {
 }
 
 /* Navbar */
+.navbar {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    /* Smooth premium transition */
+}
+
 .navbar-brand {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    /* Larger brand */
+    transition: color 0.3s ease;
 }
 
 .nav-link {
     font-weight: 500;
-    color: var(--secondary-color);
-    margin: 0 0.5rem;
-    transition: color 0.3s ease;
+    font-size: 1.1rem;
+    /* Larger links */
+    margin: 0 1rem;
+    /* More spacious */
+    transition: all 0.3s ease;
+    position: relative;
 }
 
-.nav-link:hover, .nav-link.active {
-    color: var(--primary-color);
+/* Hover effect for links */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Navbar Transparent State (Floating Glass) */
+.navbar-transparent {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    /* Floating positioning */
+    margin-top: 1.5rem;
+    width: 94%;
+    left: 3%;
+    /* Center it (100 - 94) / 2 */
+    border-radius: 50px;
+    /* Pill shape */
+    padding: 1rem 2rem !important;
+    /* Spacious */
+}
+
+.navbar-transparent .nav-link {
+    color: white !important;
+}
+
+.navbar-transparent .nav-link:hover,
+.navbar-transparent .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+.navbar-transparent .navbar-brand {
+    color: white !important;
+}
+
+/* Navbar Scrolled State (Sticky) */
+.navbar-scrolled {
+    background-color: white !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+
+    /* Reset floating */
+    margin-top: 0;
+    width: 100%;
+    left: 0;
+    border-radius: 0;
+    padding: 0.8rem 1rem !important;
+}
+
+.navbar-scrolled .nav-link {
+    color: var(--secondary-color) !important;
+}
+
+.navbar-scrolled .nav-link:hover,
+.navbar-scrolled .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+.navbar-scrolled .navbar-brand {
+    color: var(--primary-color) !important;
+}
+
+.navbar-scrolled .navbar-toggler {
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.navbar-scrolled .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-transparent .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-transparent .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 /* Hero Section */
 .hero-section {
-    min-height: 90vh;
-    background-image: url('https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=1920&auto=format&fit=crop');
+    min-height: 100vh;
+    background-image: url('media/progetto-senza-titolo-8-1873x1054.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -82,20 +185,53 @@ h1, h2, h3, h4, h5, .navbar-brand {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(30, 41, 59, 0.5); /* #1e293b with 50% opacity */
+    background: rgba(30, 41, 59, 0.5);
+    /* #1e293b with 50% opacity */
     z-index: 0;
 }
 
-/* Cards */
-.feature-card {
+/* Carousel */
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.carousel-track {
+    display: flex;
+    width: max-content;
+    gap: 2rem;
+    animation: scroll 40s linear infinite;
+}
+
+.carousel-track:hover {
+    animation-play-state: paused;
+}
+
+.carousel-card {
+    min-width: 350px;
+    max-width: 350px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.feature-card:hover {
-    transform: translateY(-10px);
+.carousel-card:hover {
+    transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
 }
 
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+        /* Moves by half its width (the duplicated set) */
+    }
+}
+
+/* Service Cards */
 .service-card {
     transition: transform 0.3s ease;
 }
@@ -126,16 +262,38 @@ footer a:hover {
 /* Smooth Scrolling is handled by CCS for supported browsers, JS fallback included */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px; /* Offset for sticky navbar */
+    scroll-padding-top: 80px;
+    /* Offset for sticky navbar */
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .hero-section {
-        min-height: 70vh;
+        min-height: 100dvh;
+        /* Mobile full screen */
     }
-    
+
     .display-3 {
         font-size: 2.5rem;
     }
+
+    /* Navbar on mobile will inherit desktop floating styles */
+    .navbar-collapse {
+        background-color: rgba(30, 41, 59, 0.95);
+        padding: 1rem;
+        border-radius: 1rem;
+        margin-top: 0.5rem;
+    }
+}
+
+/* Split Section */
+.split-section {
+    background-color: var(--secondary-color);
+    color: white;
+    overflow: hidden;
+}
+
+.split-section img {
+    min-height: 400px;
+    object-position: center;
 }
