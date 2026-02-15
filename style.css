@@ -361,13 +361,15 @@ html {
     }
 
     .navbar-collapse {
-        background-color: rgba(0, 0, 0, 0.95);
-        /* Pure black/grey instead of Navy */
-        backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, 0.6);
+        /* Dark Glass */
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
         padding: 1.5rem;
         border-radius: 1rem;
         margin-top: 1rem;
-        box-shadow: var(--shadow-xl);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .navbar-collapse .nav-link {
