@@ -347,9 +347,13 @@ html {
 /* Responsive */
 @media (max-width: 991px) {
     .hero-section {
+        height: 100vh;
+        /* Fallback */
+        height: 100dvh;
+        /* Mobile dynamic viewport */
         min-height: 100dvh;
         text-align: left;
-        padding-top: 80px;
+        /* Removed padding-top so centering works correctly with 100dvh */
     }
 
     .display-3 {
@@ -357,7 +361,8 @@ html {
     }
 
     .navbar-collapse {
-        background-color: rgba(15, 23, 42, 0.98);
+        background-color: rgba(0, 0, 0, 0.95);
+        /* Pure black/grey instead of Navy */
         backdrop-filter: blur(10px);
         padding: 1.5rem;
         border-radius: 1rem;
