@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doggy Star — Toelettatura Premium · Savona</title>
+    <meta name="description"
+        content="Doggy Star a Savona: toelettatura professionale, taglio e tosatura, spa all'ozono per cani. Prenota ora.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="page-top">
+
+    <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+    <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+    <!-- Navbar -->
+    <nav id="mainNav" role="navigation" aria-label="Navigazione principale">
+        <a class="nav__brand" href="#page-top">Doggy Star</a>
+        <ul class="nav__links" id="navLinks">
+            <li><a href="#hero" class="nav-anchor">Home</a></li>
+            <li><a href="#services" class="nav-anchor">Servizi</a></li>
+            <li><a href="#about" class="nav-anchor">Chi Siamo</a></li>
+            <li><a href="#testimonials" class="nav-anchor">Recensioni</a></li>
+            <li><a href="#contact" class="nav-anchor">Contatti</a></li>
+        </ul>
+        <a href="https://wa.me/391234567890" target="_blank" rel="noopener" class="nav__cta" id="navCta">
+            <i class="fab fa-whatsapp"></i>
+            <span>Prenota Ora</span>
+        </a>
+        <button class="nav__hamburger" id="navHamburger" aria-label="Apri menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <div class="nav__drawer" id="navDrawer" aria-hidden="true">
+        <button class="nav__drawer__close" id="navDrawerClose" aria-label="Chiudi menu">×</button>
+        <a href="#hero" class="nav-anchor">Home</a>
+        <a href="#services" class="nav-anchor">Servizi</a>
+        <a href="#about" class="nav-anchor">Chi Siamo</a>
+        <a href="#testimonials" class="nav-anchor">Recensioni</a>
+        <a href="#contact" class="nav-anchor">Contatti</a>
+    </div>
+
+    <!-- Hero -->
+    <header id="hero">
+        <div class="hero__text">
+            <p class="hero__kicker reveal">Toelettatura · Savona</p>
+            <h1 class="hero__headline">
+                <span class="reveal-mask"><span class="reveal-mask-inner">Il tuo cane,</span></span>
+                <span class="reveal-mask"><span class="reveal-mask-inner"><em>splendente</em></span></span>
+                <span class="reveal-mask"><span class="reveal-mask-inner">come una stella.</span></span>
+            </h1>
+            <p class="hero__body reveal">
+                Taglio, tosatura, spa all'ozono e trattamenti esclusivi per il benessere
+                del tuo migliore amico. Nel cuore di Savona.
+            </p>
+            <div class="hero__actions reveal">
+                <a href="https://wa.me/391234567890" target="_blank" rel="noopener"
+                    class="btn-atelier btn-atelier--dark">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Prenota con Doggy Star</span>
+                </a>
+                <a href="#services" class="btn-atelier btn-atelier--outline nav-anchor">
+                    <span>Scopri i Servizi</span>
+                </a>
+            </div>
+            <div class="hero__scroll-hint reveal"><span></span>Scroll</div>
+        </div>
+        <div class="hero__image" id="heroImage">
+            <img src="assets/toelettatura-cane-01-1.jpg" alt="Toelettatura cane — Doggy Star Savona" id="heroImg"
+                loading="eager">
+        </div>
+    </header>
+
+    <!-- Services -->
+    <section id="services" aria-labelledby="servicesTitle">
+        <div class="services__header section-header">
+            <span class="eyebrow reveal">Cosa Offriamo</span>
+            <h2 id="servicesTitle" class="reveal">I Nostri Servizi</h2>
+            <div class="divider-line centered reveal"></div>
+            <p class="reveal">Ogni trattamento è pensato per il benessere e la bellezza del tuo cane, con cura
+                artigianale e prodotti certificati.</p>
+        </div>
+        <div class="services__grid">
+
+            <!-- Panel 1: Taglio & Tosatura -->
+            <div class="service-panel reveal-scale" id="panelTaglio">
+                <img class="service-panel__img" src="assets/progetto-senza-titolo-8-1873x1054.png"
+                    alt="Taglio e Tosatura — Doggy Star" loading="lazy">
+                <div class="service-panel__overlay"></div>
+                <div class="service-panel__content">
+                    <svg class="service-panel__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="6" cy="6" r="3" />
+                        <circle cx="6" cy="18" r="3" />
+                        <line x1="20" y1="4" x2="8.12" y2="15.88" />
+                        <line x1="14.47" y1="14.48" x2="20" y2="20" />
+                        <line x1="8.12" y1="8.12" x2="12" y2="12" />
+                    </svg>
+                    <p class="service-panel__label">Grooming</p>
+                    <h3 class="service-panel__title">Taglio &amp; Tosatura,<br>su misura per lui</h3>
+                    <ul class="service-panel__list">
+                        <li>Taglio di razza e fantasia</li>
+                        <li>Tosatura completa</li>
+                        <li>Rifinitura muso, orecchie &amp; zampe</li>
+                    </ul>
+                    <a href="https://wa.me/391234567890" class="service-panel__link" target="_blank"
+                        rel="noopener">Prenota <i class="fas fa-arrow-right fa-xs"></i></a>
+                </div>
+            </div>
+
+            <!-- Panel 2: Spa all'Ozono -->
+            <div class="service-panel reveal-scale" id="panelSpa">
+                <img class="service-panel__img" src="assets/toelettatura-cani-gatti-animalone-milano-scaled.jpg.webp"
+                    alt="Spa all'Ozono — Doggy Star" loading="lazy">
+                <div class="service-panel__overlay"></div>
+                <div class="service-panel__content">
+                    <svg class="service-panel__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                    <p class="service-panel__label">Benessere</p>
+                    <h3 class="service-panel__title">Spa all'Ozono,<br>puro relax</h3>
+                    <ul class="service-panel__list">
+                        <li>Bagno ozonizzato antibatterico</li>
+                        <li>Trattamento pelo &amp; cute</li>
+                        <li>Profumazione delicata</li>
+                    </ul>
+                    <a href="https://wa.me/391234567890" class="service-panel__link" target="_blank"
+                        rel="noopener">Prenota <i class="fas fa-arrow-right fa-xs"></i></a>
+                </div>
+            </div>
+
+            <!-- Panel 3: Bagno & Asciugatura -->
+            <div class="service-panel reveal-scale" id="panelBagno">
+                <img class="service-panel__img"
+                    src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=900&q=80"
+                    alt="Bagno e Asciugatura — Doggy Star" loading="lazy">
+                <div class="service-panel__overlay"></div>
+                <div class="service-panel__content">
+                    <svg class="service-panel__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M9 6l3-4 3 4" />
+                        <path d="M5 10h14a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2z" />
+                    </svg>
+                    <p class="service-panel__label">Igiene</p>
+                    <h3 class="service-panel__title">Bagno &amp; Asciugatura,<br>pelo perfetto</h3>
+                    <ul class="service-panel__list">
+                        <li>Shampoo specifico per razza</li>
+                        <li>Asciugatura professionale</li>
+                        <li>Spazzolatura &amp; lucidatura</li>
+                    </ul>
+                    <a href="https://wa.me/391234567890" class="service-panel__link" target="_blank"
+                        rel="noopener">Prenota <i class="fas fa-arrow-right fa-xs"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" aria-labelledby="aboutTitle">
+        <div class="section-header" style="padding: 0 2rem;">
+            <span class="eyebrow reveal">Chi Siamo</span>
+            <h2 id="aboutTitle" class="reveal">Il tuo amico a quattro zampe,<br>curato a Savona</h2>
+            <div class="divider-line centered reveal"></div>
+            <p class="reveal">Passione per gli animali, cura certosina e professionalità in un ambiente accogliente e
+                sicuro.</p>
+        </div>
+        <div class="about__grid">
+            <div class="about__image-wrap reveal-left">
+                <img class="about__img" src="assets/tosatura-barboncino.jpg"
+                    alt="Tosatura barboncino — Doggy Star Savona" loading="lazy">
+                <div class="about__badge">
+                    <span class="about__badge-num">5+</span>
+                    <span class="about__badge-label">Anni di<br>Esperienza</span>
+                </div>
+            </div>
+            <div class="about__text reveal-right">
+                <p>
+                    Doggy Star nasce dall'amore per gli animali e dalla volontà di offrire
+                    ai cani di Savona un'esperienza di toelettatura davvero di qualità —
+                    in un ambiente pulito, rilassante e attento alle esigenze di ogni razza.
+                </p>
+                <div class="about__features">
+                    <div class="about__feature">
+                        <div class="about__feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h5>Qualità &amp; Igiene</h5>
+                            <p>Attrezzature sterilizzate e prodotti professionali per la totale sicurezza del tuo cane.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about__feature">
+                        <div class="about__feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h5>Passione &amp; Cura</h5>
+                            <p>Ogni cane è unico. Adattiamo ogni trattamento alla razza, al carattere e alle esigenze
+                                specifiche.</p>
+                        </div>
+                    </div>
+                    <div class="about__feature">
+                        <div class="about__feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h5>Puntualità &amp; Rispetto</h5>
+                            <p>Il tuo tempo è prezioso quanto quello del tuo cane. Ogni appuntamento rispettato con
+                                precisione.</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#contact" class="btn-atelier btn-atelier--outline nav-anchor">
+                    <span>Scopri dove siamo</span>
+                    <i class="fas fa-arrow-right fa-xs"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" aria-labelledby="testiTitle">
+        <div class="testimonials__header">
+            <span class="eyebrow reveal">Dicono di Noi</span>
+            <h2 id="testiTitle" class="reveal">Le parole dei padroni di Savona</h2>
+            <div class="divider-line centered reveal"></div>
+        </div>
+        <div class="testimonials__grid">
+            <article class="testi-card reveal">
+                <div class="testi-card__stars" aria-label="5 stelle">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="testi-card__quote">"Il mio Golden Retriever esce sempre perfetto! La toelettatura è accurata e
+                    il personale è davvero gentile con i cani. Doggy Star è il migliore a Savona."</p>
+                <div class="testi-card__author">
+                    <div class="testi-card__avatar">M</div>
+                    <div><span class="testi-card__name">Marco T.</span><span class="testi-card__role">Cliente
+                            fedele</span></div>
+                </div>
+            </article>
+            <article class="testi-card reveal">
+                <div class="testi-card__stars" aria-label="5 stelle">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="testi-card__quote">"Ho provato la spa all'ozono per la mia Labrador e la differenza è stata
+                    immediata — pelo lucido e senza odori. Ambiente curato e professionale. Tornerò sempre!"</p>
+                <div class="testi-card__author">
+                    <div class="testi-card__avatar">C</div>
+                    <div><span class="testi-card__name">Chiara B.</span><span class="testi-card__role">Residente
+                            Savona</span></div>
+                </div>
+            </article>
+            <article class="testi-card reveal">
+                <div class="testi-card__stars" aria-label="5 stelle">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="testi-card__quote">"Il barboncino è uscito come un modello! Taglio preciso, profumato al punto
+                    giusto. Si vede che amano i cani. Finalmente una toelettatura di fiducia a Savona."</p>
+                <div class="testi-card__author">
+                    <div class="testi-card__avatar">L</div>
+                    <div><span class="testi-card__name">Laura P.</span><span class="testi-card__role">Cliente</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" aria-labelledby="footerBrand">
+        <div class="footer__grid">
+            <div>
+                <a class="footer__brand" id="footerBrand" href="#page-top">Doggy Star</a>
+                <p class="footer__tagline">La tua toelettatura di fiducia a Savona. Benessere, igiene e stile per il tuo
+                    cane, in un ambiente accogliente e professionale.</p>
+                <div class="footer__socials">
+                    <a href="#" class="footer__social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="footer__social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/391234567890" target="_blank" rel="noopener" class="footer__social-btn"
+                        aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3 class="footer__col-title">Contatti &amp; Orari</h3>
+                <address style="font-style:normal;">
+                    <div class="footer__contact-item"><i class="fas fa-map-marker-alt"></i><span>Via Esempio
+                            123,<br>17100 Savona (SV)</span></div>
+                    <div class="footer__contact-item"><i class="fas fa-phone"></i><a href="tel:+390191234567">+39 019
+                            1234567</a></div>
+                    <div class="footer__contact-item"><i class="fas fa-envelope"></i><a
+                            href="mailto:info@doggystar.it">info@doggystar.it</a></div>
+                </address>
+                <hr style="border-color:rgba(255,255,255,.06);margin:1.5rem 0;">
+                <ul class="footer__hours" aria-label="Orari di apertura">
+                    <li><span>Lunedì – Venerdì</span> <span>09:00 – 18:30</span></li>
+                    <li><span>Sabato</span> <span>09:00 – 13:00</span></li>
+                    <li class="closed"><span>Domenica</span> <span>Chiuso</span></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="footer__col-title">Dove Siamo</h3>
+                <div class="footer__map">
+                    <iframe title="Mappa Doggy Star Savona"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23148.6!2d8.4810!3d44.3071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d30e3333333333%3A0xaaaaaaaaaaaaaaaa!2sSavona!5e0!3m2!1sit!2sit!4v1620000000000!5m2!1sit!2sit"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <span>© 2025 Doggy Star · Savona</span>
+            <span>Fatto con <i class="fas fa-heart" style="color:var(--accent);margin:0 .3em;" aria-hidden="true"></i>
+                per i tuoi cani</span>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp CTA -->
+    <a href="https://wa.me/391234567890" target="_blank" rel="noopener" class="wa-float"
+        aria-label="Prenota su WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        Prenota
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
