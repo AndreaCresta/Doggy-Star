@@ -507,7 +507,7 @@ a {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: calc(var(--nav-h) + 3rem) 1.75rem 9rem;
+        padding: calc(var(--nav-h) + 6rem) 1.75rem 8rem;
     }
 
     .hero__kicker {
@@ -1244,27 +1244,24 @@ footer#contact {
     .wa-float {
         display: flex;
         align-items: center;
-        gap: .5rem;
+        justify-content: center;
+        padding: 0;
         position: fixed;
         bottom: max(1.5rem, env(safe-area-inset-bottom, 1.5rem));
         right: 1.25rem;
         z-index: 990;
         background: #25D366;
         color: #fff;
-        border-radius: 100px;
-        padding: .75rem 1.4rem .75rem 1.1rem;
-        font-family: var(--font-body);
-        font-size: .8125rem;
-        font-weight: 500;
-        letter-spacing: .06em;
-        text-transform: uppercase;
+        border-radius: 50%;
+        width: 52px;
+        height: 52px;
         box-shadow: 0 6px 24px rgba(37, 211, 102, .4);
         text-decoration: none;
         transition: background .3s, transform .3s, box-shadow .3s;
     }
 
     .wa-float i {
-        font-size: 1.15rem;
+        font-size: 1.5rem;
     }
 
     .wa-float:hover {
